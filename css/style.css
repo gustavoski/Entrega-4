@@ -13,8 +13,7 @@
 #eslogan {
   position: relative;
   margin-top: 85px;
-  z-index: 10;
-  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.6); }
+  z-index: 10; }
 
 /* transición de los cards en la sección de servicios en el index */
 .cardTransition {
