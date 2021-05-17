@@ -9,12 +9,18 @@
 .bgBlue {
   background-color: #004f98; }
 
+hr.separador {
+  border: 0;
+  height: 12px;
+  color: #004f98;
+  margin-left: 50px;
+  margin-right: 50px; }
+
 /* estilo del eslogan en la pagina index */
 #eslogan {
   position: relative;
   margin-top: 85px;
-  z-index: 10;
-  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.6); }
+  z-index: 10; }
 
 /* transición de los cards en la sección de servicios en el index */
 .cardTransition {
@@ -84,6 +90,7 @@
   color: #fff;
   background: -webkit-linear-gradient(45deg, #00b5f5, #fff);
   -webkit-background-clip: text;
+  /*si saco este error no me aparecen bien los iconos del footer*/
   -webkit-text-fill-color: transparent;
   transition: all 265ms ease-in; }
 
