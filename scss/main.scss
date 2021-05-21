@@ -6,15 +6,45 @@
   font-family: "Montserrat", sans-serif;
 }
 
+//mixins
+
+@mixin wh ($ancho, $alto) {
+  width: $ancho;
+  height: $ancho;
+}
+
+@mixin color-size {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+
+// extend
+
 /* background azul */
 .bgBlue {
   background-color: #004f98;
 }
 
+/* width 300 */
+
+.w-300{
+@include wh (300px, auto);
+}
+
+
+
+
+
+
+/* separador de secciones */
 hr.separador {
   border: 0;
   height: 12px;
   color: #004f98;
+}
+
+hr.separador--margin{
   margin-left: 50px;
   margin-right: 50px;
 }
@@ -45,8 +75,10 @@ hr.separador {
 /* imagenes redondas */
 .imgRedonda {
   border-radius: 150px;
-  width: 200px;
-  height: 200px;
+  overflow: hidden;
+  @include wh (200px,200px);
+  display: flex;
+  justify-content: center;
 }
 
 /* seteo de los botones de social media del footer - extraidos del framework https://freefrontend.com/css-social-media-icons/*/
@@ -86,8 +118,7 @@ hr.separador {
   -ms-transform: scale(1);
   -webkit-transform: scale(1);
   content: " ";
-  width: 60px;
-  height: 60px;
+@include wh(60px,60px );
   border-radius: 100%;
   display: block;
   background: linear-gradient(45deg, #00b5f5, #002a8f);
@@ -105,7 +136,7 @@ hr.separador {
   -webkit-transform: scale(2.2);
   color: #fff;
   background: -webkit-linear-gradient(45deg, #00b5f5, #fff);
-  -webkit-background-clip: text; /*si saco este error no me aparecen bien los iconos del footer*/
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 265ms ease-in;
 }
@@ -118,8 +149,7 @@ hr.separador {
 /* seteo del formulario de contacto */
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
+@include color-size;
 }
 
 input:focus::-webkit-input-placeholder,
@@ -129,8 +159,7 @@ textarea:focus::-webkit-input-placeholder {
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
+  @include color-size;
 }
 
 input:focus::-moz-placeholder,
@@ -140,8 +169,7 @@ textarea:focus::-moz-placeholder {
 
 input::placeholder,
 textarea::placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
+  @include color-size;
 }
 
 input:focus::placeholder,
@@ -151,8 +179,7 @@ textarea::focus:placeholder {
 
 input::-ms-placeholder,
 textarea::-ms-placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
+  @include color-size;
 }
 
 input:focus::-ms-placeholder,
@@ -164,8 +191,7 @@ textarea:focus::-ms-placeholder {
 
 input:hover::-webkit-input-placeholder,
 textarea:hover::-webkit-input-placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
+  @include color-size;
 }
 
 input:hover:focus::-webkit-input-placeholder,
@@ -175,8 +201,7 @@ textarea:hover:focus::-webkit-input-placeholder {
 
 input:hover::-moz-placeholder,
 textarea:hover::-moz-placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
+  @include color-size;
 }
 
 input:hover:focus::-moz-placeholder,
@@ -186,8 +211,7 @@ textarea:hover:focus::-moz-placeholder {
 
 input:hover::placeholder,
 textarea:hover::placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
+  @include color-size;
 }
 
 input:hover:focus::placeholder,
@@ -197,8 +221,7 @@ textarea:hover:focus::placeholder {
 
 input:hover::placeholder,
 textarea:hover::placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
+  @include color-size;
 }
 
 input:hover:focus::-ms-placeholder,
