@@ -6,45 +6,42 @@
   font-family: "Montserrat", sans-serif;
 }
 
+//Varibles
+
+$blue: #004f98;
+$grey: #cbc6c1;
+
 //mixins
 
-@mixin wh ($ancho, $alto) {
+@mixin wh($ancho, $alto) {
   width: $ancho;
-  height: $ancho;
+  height: $alto;
 }
 
 @mixin color-size {
-  color: #e2dedb;
+  color: $grey;
   font-size: 0.875em;
 }
 
-
-// extend
-
 /* background azul */
 .bgBlue {
-  background-color: #004f98;
+  background-color: $blue;
 }
 
 /* width 300 */
 
-.w-300{
-@include wh (300px, auto);
+.w-300 {
+  @include wh(300px, auto);
 }
-
-
-
-
-
 
 /* separador de secciones */
 hr.separador {
   border: 0;
   height: 12px;
-  color: #004f98;
+  color: $blue;
 }
 
-hr.separador--margin{
+hr.separador--margin {
   margin-left: 50px;
   margin-right: 50px;
 }
@@ -54,7 +51,6 @@ hr.separador--margin{
   position: relative;
   margin-top: 85px;
   z-index: 10;
-
 }
 
 /* transición de los cards en la sección de servicios en el index */
@@ -68,7 +64,7 @@ hr.separador--margin{
 
 /* background de los botones de los cards en la sección de servicios en el index */
 .btnCardBg {
-  background-color: #004f98;
+  background-color: $blue;
   color: #fff;
 }
 
@@ -76,7 +72,7 @@ hr.separador--margin{
 .imgRedonda {
   border-radius: 150px;
   overflow: hidden;
-  @include wh (200px,200px);
+  @include wh(200px, 200px);
   display: flex;
   justify-content: center;
 }
@@ -92,53 +88,53 @@ hr.separador--margin{
   padding: 0;
   list-style: none;
   margin: 1em;
-}
 
-.social-icons li {
-  display: inline-block;
-  margin: 0.15em;
-  position: relative;
-  font-size: 1.2em;
-}
+  & li {
+    display: inline-block;
+    margin: 0.15em;
+    position: relative;
+    font-size: 1.2em;
 
-.social-icons i {
-  color: #fff;
-  position: absolute;
-  top: 21px;
-  left: 21px;
-  transition: all 265ms ease-out;
-}
+    & a {
+      display: inline-block;
 
-.social-icons a {
-  display: inline-block;
-}
+      & i {
+        color: #fff;
+        position: absolute;
+        top: 21px;
+        left: 21px;
+        transition: all 265ms ease-out;
+      }
+    }
 
-.social-icons a:before {
-  transform: scale(1);
-  -ms-transform: scale(1);
-  -webkit-transform: scale(1);
-  content: " ";
-@include wh(60px,60px );
-  border-radius: 100%;
-  display: block;
-  background: linear-gradient(45deg, #00b5f5, #002a8f);
-  transition: all 265ms ease-out;
-}
+    & a:before {
+      transform: scale(1);
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      content: " ";
+      @include wh(60px, 60px);
+      border-radius: 100%;
+      display: block;
+      background: linear-gradient(45deg, #00b5f5, $blue);
+      transition: all 265ms ease-out;
+    }
 
-.social-icons a:hover:before {
-  transform: scale(0);
-  transition: all 265ms ease-in;
-}
+    & a:hover:before {
+      transform: scale(0);
+      transition: all 265ms ease-in;
+    }
 
-.social-icons a:hover i {
-  transform: scale(2.2);
-  -ms-transform: scale(2.2);
-  -webkit-transform: scale(2.2);
-  color: #fff;
-  background: -webkit-linear-gradient(45deg, #00b5f5, #fff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 265ms ease-in;
+    a:hover i {
+      transform: scale(2.2);
+      -ms-transform: scale(2.2);
+      -webkit-transform: scale(2.2);
+      color: #fff;
+      background: -webkit-linear-gradient(45deg, #00b5f5, #fff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 265ms ease-in;
+    }
+  }
 }
 
 /* seteo de los links de la pagina sitios        */
@@ -149,7 +145,7 @@ hr.separador--margin{
 /* seteo del formulario de contacto */
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-@include color-size;
+  @include color-size;
 }
 
 input:focus::-webkit-input-placeholder,
@@ -196,7 +192,7 @@ textarea:hover::-webkit-input-placeholder {
 
 input:hover:focus::-webkit-input-placeholder,
 textarea:hover:focus::-webkit-input-placeholder {
-  color: #cbc6c1;
+  color: $grey;
 }
 
 input:hover::-moz-placeholder,
@@ -206,7 +202,7 @@ textarea:hover::-moz-placeholder {
 
 input:hover:focus::-moz-placeholder,
 textarea:hover:focus::-moz-placeholder {
-  color: #cbc6c1;
+  color: $grey;
 }
 
 input:hover::placeholder,
@@ -216,7 +212,7 @@ textarea:hover::placeholder {
 
 input:hover:focus::placeholder,
 textarea:hover:focus::placeholder {
-  color: #cbc6c1;
+  color: $grey;
 }
 
 input:hover::placeholder,
@@ -226,7 +222,7 @@ textarea:hover::placeholder {
 
 input:hover:focus::-ms-placeholder,
 textarea:hover::focus:-ms-placeholder {
-  color: #cbc6c1;
+  color: $grey;
 }
 
 #form {

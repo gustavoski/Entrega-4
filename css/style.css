@@ -12,7 +12,7 @@
 /* width 300 */
 .w-300 {
   width: 300px;
-  height: 300px; }
+  height: auto; }
 
 /* separador de secciones */
 hr.separador {
@@ -61,48 +61,42 @@ hr.separador--margin {
   padding: 0;
   list-style: none;
   margin: 1em; }
-
-.social-icons li {
-  display: inline-block;
-  margin: 0.15em;
-  position: relative;
-  font-size: 1.2em; }
-
-.social-icons i {
-  color: #fff;
-  position: absolute;
-  top: 21px;
-  left: 21px;
-  transition: all 265ms ease-out; }
-
-.social-icons a {
-  display: inline-block; }
-
-.social-icons a:before {
-  transform: scale(1);
-  -ms-transform: scale(1);
-  -webkit-transform: scale(1);
-  content: " ";
-  width: 60px;
-  height: 60px;
-  border-radius: 100%;
-  display: block;
-  background: linear-gradient(45deg, #00b5f5, #002a8f);
-  transition: all 265ms ease-out; }
-
-.social-icons a:hover:before {
-  transform: scale(0);
-  transition: all 265ms ease-in; }
-
-.social-icons a:hover i {
-  transform: scale(2.2);
-  -ms-transform: scale(2.2);
-  -webkit-transform: scale(2.2);
-  color: #fff;
-  background: -webkit-linear-gradient(45deg, #00b5f5, #fff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 265ms ease-in; }
+  .social-icons li {
+    display: inline-block;
+    margin: 0.15em;
+    position: relative;
+    font-size: 1.2em; }
+    .social-icons li a {
+      display: inline-block; }
+      .social-icons li a i {
+        color: #fff;
+        position: absolute;
+        top: 21px;
+        left: 21px;
+        transition: all 265ms ease-out; }
+    .social-icons li a:before {
+      transform: scale(1);
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      content: " ";
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      display: block;
+      background: linear-gradient(45deg, #00b5f5, #004f98);
+      transition: all 265ms ease-out; }
+    .social-icons li a:hover:before {
+      transform: scale(0);
+      transition: all 265ms ease-in; }
+    .social-icons li a:hover i {
+      transform: scale(2.2);
+      -ms-transform: scale(2.2);
+      -webkit-transform: scale(2.2);
+      color: #fff;
+      background: -webkit-linear-gradient(45deg, #00b5f5, #fff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 265ms ease-in; }
 
 /* seteo de los links de la pagina sitios        */
 .linkSitios {
@@ -111,7 +105,7 @@ hr.separador--margin {
 /* seteo del formulario de contacto */
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #e2dedb;
+  color: #cbc6c1;
   font-size: 0.875em; }
 
 input:focus::-webkit-input-placeholder,
@@ -120,7 +114,7 @@ textarea:focus::-webkit-input-placeholder {
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-  color: #e2dedb;
+  color: #cbc6c1;
   font-size: 0.875em; }
 
 input:focus::-moz-placeholder,
@@ -129,7 +123,7 @@ textarea:focus::-moz-placeholder {
 
 input::placeholder,
 textarea::placeholder {
-  color: #e2dedb;
+  color: #cbc6c1;
   font-size: 0.875em; }
 
 input:focus::placeholder,
@@ -138,7 +132,7 @@ textarea::focus:placeholder {
 
 input::-ms-placeholder,
 textarea::-ms-placeholder {
-  color: #e2dedb;
+  color: #cbc6c1;
   font-size: 0.875em; }
 
 input:focus::-ms-placeholder,
@@ -148,7 +142,7 @@ textarea:focus::-ms-placeholder {
 /* on hover placeholder */
 input:hover::-webkit-input-placeholder,
 textarea:hover::-webkit-input-placeholder {
-  color: #e2dedb;
+  color: #cbc6c1;
   font-size: 0.875em; }
 
 input:hover:focus::-webkit-input-placeholder,
@@ -157,7 +151,7 @@ textarea:hover:focus::-webkit-input-placeholder {
 
 input:hover::-moz-placeholder,
 textarea:hover::-moz-placeholder {
-  color: #e2dedb;
+  color: #cbc6c1;
   font-size: 0.875em; }
 
 input:hover:focus::-moz-placeholder,
@@ -166,7 +160,7 @@ textarea:hover:focus::-moz-placeholder {
 
 input:hover::placeholder,
 textarea:hover::placeholder {
-  color: #e2dedb;
+  color: #cbc6c1;
   font-size: 0.875em; }
 
 input:hover:focus::placeholder,
@@ -175,7 +169,7 @@ textarea:hover:focus::placeholder {
 
 input:hover::placeholder,
 textarea:hover::placeholder {
-  color: #e2dedb;
+  color: #cbc6c1;
   font-size: 0.875em; }
 
 input:hover:focus::-ms-placeholder,
